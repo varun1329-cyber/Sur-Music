@@ -65,6 +65,15 @@
             border-radius: 0;
             overflow: visible;
         }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
 <body class="selection:bg-google-blueLight selection:text-google-blue">
@@ -76,7 +85,9 @@
                 
                 <!-- Logo with attached image -->
                 <a href="#" class="flex items-center space-x-3 group">
-                    <img src="def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Classes Logo" class="logo-full h-12 w-auto sm:h-14 object-contain">
+                    <div class="w-10 h-10 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center font-bold text-lg border border-google-blue/20">
+                        SMC
+                    </div>
                     <div>
                         <span class="text-xl font-medium tracking-tight text-google-textPrimary block leading-none">
                             <span class="text-google-blue">S</span><span class="text-google-red">u</span><span class="text-google-yellow">r</span> Music Classes
@@ -92,6 +103,7 @@
                     <a href="#about" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">About</a>
                     <a href="#focus" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Focus Areas</a>
                     <a href="#formats" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Formats</a>
+                    <a href="#gallery" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Gallery</a>
                     <a href="#hours" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Hours</a>
                     <a href="#reviews" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Reviews</a>
                     <a href="tel:+919241243456" class="bg-google-blue text-white px-5 py-2.5 rounded-full hover:bg-google-blueHover shadow-google-button transition-all text-xs font-medium inline-flex items-center justify-center gap-2">
@@ -112,6 +124,7 @@
             <a href="#about" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">About</a>
             <a href="#focus" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Focus Areas</a>
             <a href="#formats" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Formats</a>
+            <a href="#gallery" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Gallery</a>
             <a href="#hours" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Hours</a>
             <a href="#reviews" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Reviews</a>
             <a href="tel:+919241243456" class="block mt-3 text-center bg-google-blue text-white py-2.5 rounded-full text-xs font-medium">Call +91 92412 43456</a>
@@ -295,6 +308,92 @@
             </div>
         </section>
 
+        <!-- Auto-Shuffling Single Frame Photo Gallery (7 Images Placeholder) -->
+        <section id="gallery" class="py-16 md:py-20 bg-white border-y border-google-border overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Moments</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Class & Performance Gallery</h2>
+                    <p class="text-google-textSecondary text-sm">Glimpses of our vocal training sessions, studio, and student recitals.</p>
+                </div>
+
+                <!-- Single Fixed Image Container Block -->
+                <div class="relative w-full h-[320px] sm:h-[420px] bg-google-grayBg border border-google-border rounded-2xl shadow-google-card overflow-hidden">
+                    
+                    <!-- Image 1 -->
+                    <div class="gallery-slide absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out flex flex-col items-center justify-center text-center p-6 bg-google-grayBg">
+                        <!-- <img src="image1.jpg" alt="Gallery Photo 1" class="absolute inset-0 w-full h-full object-cover"> -->
+                        <div class="w-16 h-16 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center mb-3 text-2xl">
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+                        <span class="font-bold text-google-textPrimary text-base">Photo Placeholder 1</span>
+                        <span class="text-xs text-google-textSecondary mt-1">Insert image 1 filename in src attribute</span>
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="gallery-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out flex flex-col items-center justify-center text-center p-6 bg-google-grayBg">
+                        <!-- <img src="image2.jpg" alt="Gallery Photo 2" class="absolute inset-0 w-full h-full object-cover"> -->
+                        <div class="w-16 h-16 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center mb-3 text-2xl">
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+                        <span class="font-bold text-google-textPrimary text-base">Photo Placeholder 2</span>
+                        <span class="text-xs text-google-textSecondary mt-1">Insert image 2 filename in src attribute</span>
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div class="gallery-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out flex flex-col items-center justify-center text-center p-6 bg-google-grayBg">
+                        <!-- <img src="image3.jpg" alt="Gallery Photo 3" class="absolute inset-0 w-full h-full object-cover"> -->
+                        <div class="w-16 h-16 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center mb-3 text-2xl">
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+                        <span class="font-bold text-google-textPrimary text-base">Photo Placeholder 3</span>
+                        <span class="text-xs text-google-textSecondary mt-1">Insert image 3 filename in src attribute</span>
+                    </div>
+
+                    <!-- Image 4 -->
+                    <div class="gallery-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out flex flex-col items-center justify-center text-center p-6 bg-google-grayBg">
+                        <!-- <img src="image4.jpg" alt="Gallery Photo 4" class="absolute inset-0 w-full h-full object-cover"> -->
+                        <div class="w-16 h-16 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center mb-3 text-2xl">
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+                        <span class="font-bold text-google-textPrimary text-base">Photo Placeholder 4</span>
+                        <span class="text-xs text-google-textSecondary mt-1">Insert image 4 filename in src attribute</span>
+                    </div>
+
+                    <!-- Image 5 -->
+                    <div class="gallery-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out flex flex-col items-center justify-center text-center p-6 bg-google-grayBg">
+                        <!-- <img src="image5.jpg" alt="Gallery Photo 5" class="absolute inset-0 w-full h-full object-cover"> -->
+                        <div class="w-16 h-16 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center mb-3 text-2xl">
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+                        <span class="font-bold text-google-textPrimary text-base">Photo Placeholder 5</span>
+                        <span class="text-xs text-google-textSecondary mt-1">Insert image 5 filename in src attribute</span>
+                    </div>
+
+                    <!-- Image 6 -->
+                    <div class="gallery-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out flex flex-col items-center justify-center text-center p-6 bg-google-grayBg">
+                        <!-- <img src="image6.jpg" alt="Gallery Photo 6" class="absolute inset-0 w-full h-full object-cover"> -->
+                        <div class="w-16 h-16 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center mb-3 text-2xl">
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+                        <span class="font-bold text-google-textPrimary text-base">Photo Placeholder 6</span>
+                        <span class="text-xs text-google-textSecondary mt-1">Insert image 6 filename in src attribute</span>
+                    </div>
+
+                    <!-- Image 7 -->
+                    <div class="gallery-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out flex flex-col items-center justify-center text-center p-6 bg-google-grayBg">
+                        <!-- <img src="image7.jpg" alt="Gallery Photo 7" class="absolute inset-0 w-full h-full object-cover"> -->
+                        <div class="w-16 h-16 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center mb-3 text-2xl">
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+                        <span class="font-bold text-google-textPrimary text-base">Photo Placeholder 7</span>
+                        <span class="text-xs text-google-textSecondary mt-1">Insert image 7 filename in src attribute</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Schedule / Hours Section -->
         <section id="hours" class="py-16 md:py-20 bg-white border-y border-google-border">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -466,7 +565,9 @@
     <footer class="bg-white border-t border-google-border py-8 text-xs text-google-textSecondary">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center space-x-3">
-                <img src="def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Logo" class="logo-full h-6 w-auto object-contain">
+                <div class="w-6 h-6 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center font-bold text-[10px]">
+                    SMC
+                </div>
                 <span class="text-google-textPrimary font-medium">Sur Music Classes</span>
             </div>
             <p>&copy; <span id="year"></span> Sur Music Classes. All rights reserved.</p>
@@ -488,6 +589,23 @@
                 mobileMenu.classList.add('hidden');
             });
         });
+
+        // Auto-Shuffling Single Container Gallery Script
+        const slides = document.querySelectorAll('.gallery-slide');
+        let currentSlideIndex = 0;
+
+        function shuffleGallery() {
+            slides[currentSlideIndex].classList.remove('opacity-100');
+            slides[currentSlideIndex].classList.add('opacity-0');
+
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+            slides[currentSlideIndex].classList.remove('opacity-0');
+            slides[currentSlideIndex].classList.add('opacity-100');
+        }
+
+        // Shuffle images sequentially every 5 seconds
+        setInterval(shuffleGallery, 5000);
     </script>
 </body>
 </html>
