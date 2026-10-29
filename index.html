@@ -65,6 +65,23 @@
             border-radius: 0;
             overflow: visible;
         }
+        .glass-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            background: rgba(255, 255, 255, 0.72);
+            border-bottom: 1px solid rgba(218, 220, 224, 0.9);
+            box-shadow: 0 1px 0 rgba(60, 64, 67, 0.08), 0 8px 24px rgba(60, 64, 67, 0.08);
+        }
+        .glass-header .nav-link {
+            transition: all 0.2s ease;
+        }
+        .glass-header .nav-link:hover {
+            background: rgba(26, 115, 232, 0.08);
+            color: #1a73e8;
+        }
         /* Hide scrollbar for Chrome, Safari and Opera */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
@@ -79,7 +96,7 @@
 <body class="selection:bg-google-blueLight selection:text-google-blue">
 
     <!-- STATIC Header (Google style clean navigation) -->
-    <header class="relative z-50 bg-white border-b border-google-border shadow-sm">
+    <header class="glass-header">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
@@ -98,12 +115,12 @@
 
                 <!-- Navigation Links -->
                 <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                    <a href="#about" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">About</a>
-                    <a href="#focus" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Focus Areas</a>
-                    <a href="#formats" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Formats</a>
-                    <a href="#gallery" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Gallery</a>
-                    <a href="#hours" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Hours</a>
-                    <a href="#reviews" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Reviews</a>
+                    <a href="#about" class="nav-link text-google-textSecondary px-3 py-2 rounded-md">About</a>
+                    <a href="#focus" class="nav-link text-google-textSecondary px-3 py-2 rounded-md">Focus Areas</a>
+                    <a href="#formats" class="nav-link text-google-textSecondary px-3 py-2 rounded-md">Formats</a>
+                    <a href="#gallery" class="nav-link text-google-textSecondary px-3 py-2 rounded-md">Gallery</a>
+                    <a href="#hours" class="nav-link text-google-textSecondary px-3 py-2 rounded-md">Hours</a>
+                    <a href="#reviews" class="nav-link text-google-textSecondary px-3 py-2 rounded-md">Reviews</a>
                     <a href="tel:+919241243456" class="bg-google-blue text-white px-5 py-2.5 rounded-full hover:bg-google-blueHover shadow-google-button transition-all text-xs font-medium inline-flex items-center justify-center space-x-2">
                         <i class="fa-solid fa-phone text-xs"></i>
                         <span>Call +91 92412 43456</span>
@@ -118,7 +135,7 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-google-border px-6 py-4 space-y-2">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/80 backdrop-blur-lg border-b border-google-border px-6 py-4 space-y-2">
             <a href="#about" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">About</a>
             <a href="#focus" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Focus Areas</a>
             <a href="#formats" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Formats</a>
