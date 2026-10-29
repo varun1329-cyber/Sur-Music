@@ -55,6 +55,16 @@
         .google-border {
             border: 1px solid #dadce0;
         }
+        .logo-full {
+            display: block;
+            width: auto;
+            max-width: none;
+            object-fit: contain;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            overflow: visible;
+        }
     </style>
 </head>
 <body class="selection:bg-google-blueLight selection:text-google-blue">
@@ -66,9 +76,7 @@
                 
                 <!-- Logo with attached image -->
                 <a href="#" class="flex items-center space-x-3 group">
-                    <div class="w-11 h-11 rounded-full bg-white p-0.5 border border-google-border flex items-center justify-center overflow-hidden shadow-sm group-hover:shadow transition-shadow">
-                        <img src="def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Classes Logo" class="w-full h-full object-contain">
-                    </div>
+                    <img src="def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Classes Logo" class="logo-full h-12 w-auto sm:h-14 object-contain">
                     <div>
                         <span class="text-xl font-medium tracking-tight text-google-textPrimary block leading-none">
                             <span class="text-google-blue">S</span><span class="text-google-red">u</span><span class="text-google-yellow">r</span> Music Classes
@@ -86,7 +94,7 @@
                     <a href="#formats" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Formats</a>
                     <a href="#hours" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Hours</a>
                     <a href="#reviews" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Reviews</a>
-                    <a href="tel:+919241243456" class="bg-google-blue text-white px-5 py-2.5 rounded-full hover:bg-google-blueHover shadow-google-button transition-all text-xs font-medium inline-flex items-center space-x-2">
+                    <a href="tel:+919241243456" class="bg-google-blue text-white px-5 py-2.5 rounded-full hover:bg-google-blueHover shadow-google-button transition-all text-xs font-medium inline-flex items-center justify-center gap-2">
                         <i class="fa-solid fa-phone text-xs"></i>
                         <span>Call +91 92412 43456</span>
                     </a>
@@ -134,11 +142,11 @@
 
                 <!-- CTA Buttons -->
                 <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="tel:+919241243456" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-google-blue hover:bg-google-blueHover text-white px-7 py-3 rounded-full font-medium transition-all text-sm shadow-google-button">
+                    <a href="tel:+919241243456" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-google-blue hover:bg-google-blueHover text-white px-7 py-3 rounded-full font-medium transition-colors shadow-google-button">
                         <i class="fa-solid fa-phone text-xs"></i>
                         <span>+91 92412 43456</span>
                     </a>
-                    <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-google-grayBg text-google-blue px-7 py-3 rounded-full font-medium transition-all text-sm border border-google-border shadow-sm">
+                    <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-google-grayBg text-google-blue px-7 py-3 rounded-full font-medium transition-colors border border-google-border shadow-sm">
                         <i class="fa-solid fa-location-dot text-xs text-google-red"></i>
                         <span>View Location</span>
                     </a>
@@ -171,7 +179,7 @@
                             </div>
                         </div>
                         <p class="text-google-textSecondary text-sm leading-relaxed">
-                            Sur Music Classes is dedicated to helping students develop deep musical sensitivity, precision in note accuracy (Sur), rhythm control (Taal), and foundational breathing techniques for lasting vocal health.
+                            Sur Music Classes is dedicated to helping students develop deep musical sensitivity, precision in note accuracy (Sur), rhythm control (Taal), and foundational breathing techniques. We nurture both beginners and advanced learners through disciplined, expressive vocal practice.
                         </p>
                         <div class="pt-4 border-t border-google-border flex flex-wrap items-center justify-between gap-2 text-xs text-google-textSecondary">
                             <span class="inline-flex items-center">
@@ -442,7 +450,7 @@
                         </div>
 
                         <div>
-                            <a href="https://maps.google.com/?q=RJ+Gardens+Indiranagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-google-blue hover:bg-google-blueHover text-white px-6 py-2.5 rounded-full text-xs font-medium transition-all shadow-google-button">
+                            <a href="https://maps.google.com/?q=RJ+Gardens+Indiranagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-google-blue hover:bg-google-blueHover text-white px-5 py-3 rounded-full font-medium transition-colors shadow-google-button">
                                 <span>Get Directions</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
@@ -458,9 +466,7 @@
     <footer class="bg-white border-t border-google-border py-8 text-xs text-google-textSecondary">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center space-x-3">
-                <div class="w-6 h-6 rounded-full bg-white border border-google-border p-0.5 flex items-center justify-center">
-                    <img src="def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Logo" class="w-full h-full object-contain">
-                </div>
+                <img src="def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Logo" class="logo-full h-6 w-auto object-contain">
                 <span class="text-google-textPrimary font-medium">Sur Music Classes</span>
             </div>
             <p>&copy; <span id="year"></span> Sur Music Classes. All rights reserved.</p>
