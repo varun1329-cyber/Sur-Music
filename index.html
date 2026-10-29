@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sur Music Classes | Hindustani Classical Vocal School - Indiranagar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Roboto & Product Sans / Outfit feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        google: {
+                            blue: '#1a73e8',
+                            blueHover: '#1557b0',
+                            blueLight: '#e8f0fe',
+                            red: '#ea4335',
+                            yellow: '#fbbc04',
+                            green: '#34a853',
+                            greenLight: '#e6f4ea',
+                            grayBg: '#f8f9fa',
+                            cardBg: '#ffffff',
+                            border: '#dadce0',
+                            textPrimary: '#202124',
+                            textSecondary: '#5f6368'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'Google Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'google-card': '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)',
+                        'google-hover': '0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15)',
+                        'google-button': '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #202124;
+            font-family: 'Roboto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .google-border {
+            border: 1px solid #dadce0;
+        }
+    </style>
+</head>
+<body class="selection:bg-google-blueLight selection:text-google-blue">
+
+    <!-- STATIC Header (Google style clean navigation) -->
+    <header class="relative z-50 bg-white border-b border-google-border shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo with attached image -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-full bg-white p-0.5 border border-google-border flex items-center justify-center overflow-hidden shadow-sm group-hover:shadow transition-shadow">
+                        <img src="def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Classes Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <span class="text-xl font-medium tracking-tight text-google-textPrimary block leading-none">
+                            <span class="text-google-blue">S</span><span class="text-google-red">u</span><span class="text-google-yellow">r</span> Music Classes
+                        </span>
+                        <span class="text-[11px] font-normal tracking-wide text-google-textSecondary block mt-1">
+                            Hindustani Classical Vocal School
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#about" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">About</a>
+                    <a href="#focus" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Focus Areas</a>
+                    <a href="#formats" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Formats</a>
+                    <a href="#hours" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Hours</a>
+                    <a href="#reviews" class="text-google-textSecondary hover:text-google-blue transition-colors px-3 py-2 rounded-md hover:bg-google-blueLight/50">Reviews</a>
+                    <a href="tel:+919241243456" class="bg-google-blue text-white px-5 py-2.5 rounded-full hover:bg-google-blueHover shadow-google-button transition-all text-xs font-medium inline-flex items-center space-x-2">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>Call +91 92412 43456</span>
+                    </a>
+                </nav>
+
+                <!-- Mobile Navigation Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-google-textSecondary hover:text-google-textPrimary p-2 rounded-full hover:bg-gray-100" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-google-border px-6 py-4 space-y-2">
+            <a href="#about" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">About</a>
+            <a href="#focus" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Focus Areas</a>
+            <a href="#formats" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Formats</a>
+            <a href="#hours" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Hours</a>
+            <a href="#reviews" class="block py-2 text-google-textSecondary hover:text-google-blue text-sm font-medium">Reviews</a>
+            <a href="tel:+919241243456" class="block mt-3 text-center bg-google-blue text-white py-2.5 rounded-full text-xs font-medium">Call +91 92412 43456</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Google Hero Banner -->
+        <section class="bg-white border-b border-google-border py-16 md:py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                
+                <!-- Google Rating Chip -->
+                <div class="inline-flex items-center space-x-2 bg-google-grayBg border border-google-border rounded-full px-4 py-1.5 shadow-sm">
+                    <span class="text-google-yellow text-sm font-bold flex items-center space-x-1">
+                        <span>4.8</span>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="text-xs text-google-textSecondary font-medium">Rating from nearly 50 Google reviews</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-google-textPrimary leading-tight">
+                    Sur Music Classes
+                </h1>
+
+                <p class="text-lg sm:text-xl text-google-textSecondary font-normal max-w-2xl mx-auto leading-relaxed">
+                    A premier Hindustani classical vocal music school located in Indiranagar, Bangalore, led by instructor <strong class="text-google-textPrimary font-semibold">Hema Shah</strong>.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="tel:+919241243456" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-google-blue hover:bg-google-blueHover text-white px-7 py-3 rounded-full font-medium transition-all text-sm shadow-google-button">
+                        <i class="fa-solid fa-phone text-xs"></i>
+                        <span>+91 92412 43456</span>
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-google-grayBg text-google-blue px-7 py-3 rounded-full font-medium transition-all text-sm border border-google-border shadow-sm">
+                        <i class="fa-solid fa-location-dot text-xs text-google-red"></i>
+                        <span>View Location</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="about" class="py-16 md:py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Overview</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Authentic Vocal Guidance</h2>
+                </div>
+
+                <!-- Google Card Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    
+                    <!-- Instructor Info Card -->
+                    <div class="md:col-span-7 bg-white p-8 rounded-2xl border border-google-border shadow-google-card space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-14 h-14 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center font-bold text-xl border border-google-blue/20">
+                                HS
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-google-textPrimary">Hema Shah</h3>
+                                <p class="text-xs text-google-blue font-medium mt-0.5">Lead Music Instructor</p>
+                            </div>
+                        </div>
+                        <p class="text-google-textSecondary text-sm leading-relaxed">
+                            Sur Music Classes is dedicated to helping students develop deep musical sensitivity, precision in note accuracy (Sur), rhythm control (Taal), and foundational breathing techniques for lasting vocal health.
+                        </p>
+                        <div class="pt-4 border-t border-google-border flex flex-wrap items-center justify-between gap-2 text-xs text-google-textSecondary">
+                            <span class="inline-flex items-center">
+                                <i class="fa-solid fa-location-dot text-google-red mr-1.5"></i> Eshwara Layout, Indiranagar, Bengaluru
+                            </span>
+                            <span class="bg-google-greenLight text-google-green px-2.5 py-1 rounded-full font-medium">Verified Academy</span>
+                        </div>
+                    </div>
+
+                    <!-- Highlights Card -->
+                    <div class="md:col-span-5 bg-white p-8 rounded-2xl border border-google-border shadow-google-card flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <div class="w-10 h-10 rounded-full bg-google-greenLight text-google-green flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-google-textPrimary">4.8 / 5 Rating</h3>
+                            <p class="text-google-textSecondary text-sm leading-relaxed">
+                                Highly appreciated by learners for structured vocal training, personalized attention, and flexible scheduling.
+                            </p>
+                        </div>
+                        <div class="pt-4">
+                            <span class="inline-block bg-google-grayBg border border-google-border rounded-full px-3 py-1 text-xs text-google-textSecondary font-medium">
+                                Nearly 50 Reviews
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Focus Areas Section -->
+        <section id="focus" class="py-16 md:py-20 bg-white border-y border-google-border">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Curriculum</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Core Musical Focus</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Focus 1 -->
+                    <div class="bg-google-grayBg p-6 rounded-2xl border border-google-border hover:shadow-md transition-shadow space-y-4">
+                        <div class="w-10 h-10 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-google-textPrimary">Hindustani Classical Vocal</h3>
+                        <p class="text-google-textSecondary text-sm leading-relaxed">
+                            Structured learning of Swara, Alankar, Raga bandish, and rhythmic taal exercises tailored for vocalists.
+                        </p>
+                    </div>
+
+                    <!-- Focus 2 -->
+                    <div class="bg-google-grayBg p-6 rounded-2xl border border-google-border hover:shadow-md transition-shadow space-y-4">
+                        <div class="w-10 h-10 rounded-full bg-google-greenLight text-google-green flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-google-textPrimary">Voice Training</h3>
+                        <p class="text-google-textSecondary text-sm leading-relaxed">
+                            Voice culture exercises designed to widen vocal range, enhance pitch consistency, and improve tonal resonance.
+                        </p>
+                    </div>
+
+                    <!-- Focus 3 -->
+                    <div class="bg-google-grayBg p-6 rounded-2xl border border-google-border hover:shadow-md transition-shadow space-y-4">
+                        <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-google-textPrimary">Breathing Techniques</h3>
+                        <p class="text-google-textSecondary text-sm leading-relaxed">
+                            Specialized breath control methods derived from classical practice to build lung stamina and sustain long notes effortlessly.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Formats & Options -->
+        <section id="formats" class="py-16 md:py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Learning Options</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Flexible Class Formats</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-2xl border border-google-border shadow-google-card flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-base font-bold text-google-textPrimary">Onsite & Online Availability</h3>
+                            <p class="text-google-textSecondary text-sm leading-relaxed">
+                                Join in-person sessions at our Indiranagar studio or attend interactive online classes from any location.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl border border-google-border shadow-google-card flex items-start space-x-4">
+                        <div class="w-10 h-10 rounded-full bg-google-greenLight text-google-green flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-base font-bold text-google-textPrimary">Children & Family Discounts</h3>
+                            <p class="text-google-textSecondary text-sm leading-relaxed">
+                                Concessionary fee structures offered for children and family members enrolling together for music classes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule / Hours Section -->
+        <section id="hours" class="py-16 md:py-20 bg-white border-y border-google-border">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Schedule</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Class Hours</h2>
+                </div>
+
+                <div class="bg-google-grayBg p-8 rounded-2xl border border-google-border space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-google-border gap-2">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-regular fa-clock text-google-blue"></i>
+                            <span class="text-google-textPrimary font-medium text-sm">Monday – Friday</span>
+                        </div>
+                        <span class="text-google-blue font-medium text-sm bg-google-blueLight px-3 py-1 rounded-full self-start sm:self-auto">
+                            12:00 PM – 8:30 PM
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-regular fa-clock text-google-blue"></i>
+                            <span class="text-google-textPrimary font-medium text-sm">Saturday – Sunday</span>
+                        </div>
+                        <span class="text-google-blue font-medium text-sm bg-google-blueLight px-3 py-1 rounded-full self-start sm:self-auto">
+                            10:00 AM – 8:30 PM
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-16 md:py-20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Feedback</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Student Reviews</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-google-border shadow-google-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex text-google-yellow text-xs space-x-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-google-textSecondary text-sm leading-relaxed">
+                                "The breathing techniques taught by Hema Shah ma'am helped me gain natural pitch stability. Highly recommended for vocalists."
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-google-border text-xs">
+                            <p class="font-semibold text-google-textPrimary">Studio Student</p>
+                            <p class="text-google-textSecondary">Indiranagar Branch</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-google-border shadow-google-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex text-google-yellow text-xs space-x-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-google-textSecondary text-sm leading-relaxed">
+                                "Great experience for my kids. The family discount was very helpful and the learning environment is extremely patient."
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-google-border text-xs">
+                            <p class="font-semibold text-google-textPrimary">Parent</p>
+                            <p class="text-google-textSecondary">Bengaluru</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-google-border shadow-google-card flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <div class="flex text-google-yellow text-xs space-x-1">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-google-textSecondary text-sm leading-relaxed">
+                                "Excellent online vocal sessions. Very meticulous attention paid to classical accuracy and vocal culture."
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-google-border text-xs">
+                            <p class="font-semibold text-google-textPrimary">Online Student</p>
+                            <p class="text-google-textSecondary">Vocal Training</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Location & Contact Info -->
+        <section id="contact" class="py-16 md:py-20 bg-white border-t border-google-border">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                <div class="text-center max-w-2xl mx-auto space-y-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Contact Details</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Address & Contact</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    
+                    <!-- Address Card -->
+                    <div class="md:col-span-7 bg-google-grayBg p-8 rounded-2xl border border-google-border space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-full bg-google-red/10 text-google-red flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="space-y-1">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-google-textSecondary">Address</h4>
+                                <p class="text-google-textPrimary text-sm leading-relaxed">
+                                    PH2, 4th Floor, East Block, RJ Gardens,<br>
+                                    17th E Cross Rd, Eshwara Layout, Indiranagar,<br>
+                                    Bengaluru, Karnataka 560008, India
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 pt-4 border-t border-google-border">
+                            <div class="w-10 h-10 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="space-y-1">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-google-textSecondary">Phone Number</h4>
+                                <a href="tel:+919241243456" class="text-google-blue font-bold text-base hover:underline block">
+                                    +91 92412 43456
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 pt-4 border-t border-google-border">
+                            <div class="w-10 h-10 rounded-full bg-google-greenLight text-google-green flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="space-y-1">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-google-textSecondary">Instructor</h4>
+                                <p class="text-google-textPrimary text-sm font-semibold">
+                                    Hema Shah
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Google Maps Link Container -->
+                    <div class="md:col-span-5 bg-google-grayBg p-8 rounded-2xl border border-google-border flex flex-col justify-between space-y-6 text-center">
+                        <div class="space-y-3">
+                            <div class="w-12 h-12 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center mx-auto text-xl">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-google-textPrimary">Find Us on Google Maps</h3>
+                            <p class="text-google-textSecondary text-sm leading-relaxed">
+                                Located near 17th E Cross Rd, Eshwara Layout in Indiranagar.
+                            </p>
+                        </div>
+
+                        <div>
+                            <a href="https://maps.google.com/?q=RJ+Gardens+Indiranagar+Bengaluru" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 bg-google-blue hover:bg-google-blueHover text-white px-6 py-2.5 rounded-full text-xs font-medium transition-all shadow-google-button">
+                                <span>Get Directions</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-google-border py-8 text-xs text-google-textSecondary">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-6 h-6 rounded-full bg-white border border-google-border p-0.5 flex items-center justify-center">
+                    <img src="def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Logo" class="w-full h-full object-contain">
+                </div>
+                <span class="text-google-textPrimary font-medium">Sur Music Classes</span>
+            </div>
+            <p>&copy; <span id="year"></span> Sur Music Classes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
