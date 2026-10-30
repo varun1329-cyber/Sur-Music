@@ -70,7 +70,14 @@
             color: #1a73e8;
         }
         .gallery-slide {
-            transition: opacity 0.7s ease;
+            transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+            transform: scale(1.02);
+        }
+        .gallery-slide.opacity-100 {
+            transform: scale(1);
+        }
+        .gallery-slide.opacity-0 {
+            transform: scale(1.08);
         }
     </style>
 </head>
@@ -405,27 +412,35 @@
 
                 <div class="relative w-full h-64 sm:h-80 overflow-hidden rounded-2xl border border-google-border bg-google-grayBg shadow-google-card">
                     <div class="gallery-slide absolute inset-0 opacity-100">
-                        <img src="./IMG_0893.jpg" alt="Class session" class="w-full h-full object-cover">
+                        <img src="./unnamed.jpg" alt="Music class" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                     </div>
                     <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed.jpg" alt="Performance" class="w-full h-full object-cover">
+                        <img src="./unnamed-2.jpg" alt="Music performance" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                     </div>
                     <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-2.jpg" alt="Students singing" class="w-full h-full object-cover">
+                        <img src="./unnamed-3.jpg" alt="Students singing" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                     </div>
                     <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-3.jpg" alt="Music class" class="w-full h-full object-cover">
+                        <img src="./unnamed-4.jpg" alt="Class practice" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                     </div>
                     <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-4.jpg" alt="Performance photo" class="w-full h-full object-cover">
+                        <img src="./unnamed-5.jpg" alt="Performance scene" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                     </div>
                     <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-5.jpg" alt="Class practice" class="w-full h-full object-cover">
+                        <img src="./unnamed-6.jpg" alt="Class session" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
+                        <img src="./unnamed-7.jpg" alt="Vocal training" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
+                        <img src="./unnamed-8.jpg" alt="Recital moment" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                     </div>
                 </div>
@@ -447,6 +462,8 @@
                         <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 4"></button>
                         <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 5"></button>
                         <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 6"></button>
+                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 7"></button>
+                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 8"></button>
                     </div>
                 </div>
             </div>
@@ -680,23 +697,18 @@
 
         function showGallery(index) {
             gallerySlides.forEach((slide, i) => {
-                if (i === index) {
-                    slide.classList.remove('opacity-0', 'pointer-events-none');
-                    slide.classList.add('opacity-100');
-                } else {
-                    slide.classList.remove('opacity-100');
-                    slide.classList.add('opacity-0', 'pointer-events-none');
-                }
+                const isActive = i === index;
+                slide.classList.toggle('opacity-100', isActive);
+                slide.classList.toggle('opacity-0', !isActive);
+                slide.classList.toggle('pointer-events-none', !isActive);
             });
 
             galleryDots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.remove('bg-gray-300', 'w-2.5');
-                    dot.classList.add('bg-google-blue', 'w-3');
-                } else {
-                    dot.classList.remove('bg-google-blue', 'w-3');
-                    dot.classList.add('bg-gray-300', 'w-2.5');
-                }
+                const isActive = i === index;
+                dot.classList.toggle('bg-google-blue', isActive);
+                dot.classList.toggle('w-3', isActive);
+                dot.classList.toggle('w-2.5', !isActive);
+                dot.classList.toggle('bg-gray-300', !isActive);
             });
 
             currentGalleryIndex = index;
