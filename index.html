@@ -69,6 +69,9 @@
             background: rgba(26, 115, 232, 0.08);
             color: #1a73e8;
         }
+        .gallery-slide {
+            transition: opacity 0.7s ease;
+        }
     </style>
 </head>
 <body class="selection:bg-google-blueLight selection:text-google-blue">
@@ -146,7 +149,7 @@
                             </div>
                         </div>
                         <p class="text-google-textSecondary text-sm leading-relaxed">
-                            Sur Music Classes is dedicated to helping students develop deep musical sensitivity, precision in note accuracy (Sur), rhythm control (Taal), and foundational breathing techniques that support sustained, expressive singing.
+                            Sur Music Classes is dedicated to helping students develop deep musical sensitivity, precision in note accuracy (Sur), rhythm control (Taal), and foundational breathing techniques for long-lasting vocal health and expressive performance.
                         </p>
                         <div class="pt-3 border-t border-google-border flex items-center justify-between gap-2 text-xs text-google-textSecondary">
                             <span class="inline-flex items-center font-medium">
@@ -171,7 +174,7 @@
 
                 </div>
 
-                <!-- Google Review Auto-Slide Block (NEW BLOCK) -->
+                <!-- Google Review Auto-Slide Block -->
                 <div id="reviews" class="bg-white p-6 sm:p-8 rounded-2xl border border-google-border shadow-google-card space-y-6 relative overflow-hidden">
                     
                     <!-- Rating Header Badge -->
@@ -220,7 +223,7 @@
                                     </div>
                                 </div>
                                 <p class="text-sm sm:text-base text-google-textPrimary leading-relaxed">
-                                    Multiple long-term students note that Hemaji is profoundly patient. One reviewer highlighted that she has the <span class="bg-google-blueLight px-1.5 py-0.5 rounded font-medium text-google-blue">&ldquo;patience to hear one song 200 times and correct the mistakes.&rdquo;</span>
+                                    Multiple long-term students note that Hemaji is profoundly patient. One reviewer highlighted that she has the rare ability to make each lesson feel encouraging while still pushing students toward technical improvement.
                                 </p>
                             </div>
                             <p class="text-xs text-google-textSecondary font-medium mt-3">— Long-term Student Review</p>
@@ -274,7 +277,7 @@
                                     </div>
                                 </div>
                                 <p class="text-sm sm:text-base text-google-textPrimary leading-relaxed">
-                                    Intermediate and advanced students note that her structured focus on Banaras Gharana techniques gives them a rock-solid understanding of Hindustani classical music fundamentals, light vocals, and Bhajans.
+                                    Intermediate and advanced students note that her structured focus on Banaras Gharana techniques gives them a rock-solid understanding of Hindustani classical music.
                                 </p>
                             </div>
                             <p class="text-xs text-google-textSecondary font-medium mt-3">— Classical Vocal Student</p>
@@ -286,10 +289,10 @@
                     <div class="pt-4 border-t border-google-border flex items-center justify-between">
                         <!-- Arrows -->
                         <div class="flex items-center space-x-2">
-                            <button id="prev-review-btn" class="w-8 h-8 rounded-full border border-google-border flex items-center justify-center text-google-textSecondary hover:text-google-blue hover:bg-google-blueLight transition-colors" aria-label="Previous Review">
+                            <button id="prev-review-btn" class="w-8 h-8 rounded-full border border-google-border flex items-center justify-center text-google-textSecondary hover:text-google-blue hover:border-google-blue hover:bg-google-blueLight transition-all">
                                 <i class="fa-solid fa-chevron-left text-xs"></i>
                             </button>
-                            <button id="next-review-btn" class="w-8 h-8 rounded-full border border-google-border flex items-center justify-center text-google-textSecondary hover:text-google-blue hover:bg-google-blueLight transition-colors" aria-label="Next Review">
+                            <button id="next-review-btn" class="w-8 h-8 rounded-full border border-google-border flex items-center justify-center text-google-textSecondary hover:text-google-blue hover:border-google-blue hover:bg-google-blueLight transition-all">
                                 <i class="fa-solid fa-chevron-right text-xs"></i>
                             </button>
                         </div>
@@ -399,10 +402,51 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
                 <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Moments</span>
                 <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Class & Performance Gallery</h2>
-                <div class="w-full h-64 sm:h-80 bg-google-grayBg border border-google-border rounded-2xl flex items-center justify-center text-google-textSecondary text-sm">
-                    <div class="space-y-2">
-                        <i class="fa-regular fa-image text-4xl text-google-blue/40"></i>
-                        <p class="font-medium">Class & Vocal Recital Gallery Container</p>
+
+                <div class="relative w-full h-64 sm:h-80 overflow-hidden rounded-2xl border border-google-border bg-google-grayBg shadow-google-card">
+                    <div class="gallery-slide absolute inset-0 opacity-100">
+                        <img src="./IMG_0893.jpg" alt="Class session" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
+                        <img src="./unnamed.jpg" alt="Performance" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
+                        <img src="./unnamed-2.jpg" alt="Students singing" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
+                        <img src="./unnamed-3.jpg" alt="Music class" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
+                        <img src="./unnamed-4.jpg" alt="Performance photo" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
+                        <img src="./unnamed-5.jpg" alt="Class practice" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between pt-1">
+                    <div class="flex items-center space-x-2">
+                        <button id="prev-gallery-btn" class="w-9 h-9 rounded-full border border-google-border bg-white text-google-textSecondary hover:text-google-blue hover:border-google-blue hover:bg-google-blueLight transition-all flex items-center justify-center">
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+                        <button id="next-gallery-btn" class="w-9 h-9 rounded-full border border-google-border bg-white text-google-textSecondary hover:text-google-blue hover:border-google-blue hover:bg-google-blueLight transition-all flex items-center justify-center">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+                    </div>
+
+                    <div id="gallery-dots" class="flex items-center space-x-2">
+                        <button class="gallery-dot w-3 h-3 rounded-full bg-google-blue transition-all" aria-label="Gallery slide 1"></button>
+                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 2"></button>
+                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 3"></button>
+                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 4"></button>
+                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 5"></button>
+                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 6"></button>
                     </div>
                 </div>
             </div>
@@ -489,7 +533,7 @@
                         </div>
 
                         <div class="pt-2">
-                            <a href="https://maps.google.com/?q=Indiranagar,+Bengaluru" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-google-blue text-white px-5 py-2.5 rounded-full hover:bg-google-blueHover transition-colors text-xs font-medium">
+                            <a href="https://maps.google.com/?q=Indiranagar,+Bengaluru" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-google-blue text-white px-4 py-2.5 rounded-full font-medium text-sm hover:bg-google-blueHover transition-colors shadow-google-button">
                                 <span>Get Directions</span>
                                 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                             </a>
@@ -515,7 +559,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu & Google Reviews Auto-Slider -->
+    <!-- JavaScript for Mobile Menu, Google Reviews Auto-Slider & Gallery Auto-Slider -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -592,7 +636,6 @@
             }
         }
 
-        // Manual controls reset timer to avoid immediate auto-advance
         nextBtn.addEventListener('click', () => {
             nextReview();
             if (isPlaying) { stopTimer(); startTimer(); }
@@ -624,8 +667,85 @@
             }
         });
 
-        // Initialize auto-sliding on load
         startTimer();
+
+        // Gallery Image Slider Logic (Auto-slides every 3.5 seconds)
+        const gallerySlides = document.querySelectorAll('.gallery-slide');
+        const galleryDots = document.querySelectorAll('.gallery-dot');
+        const prevGalleryBtn = document.getElementById('prev-gallery-btn');
+        const nextGalleryBtn = document.getElementById('next-gallery-btn');
+
+        let currentGalleryIndex = 0;
+        let galleryTimer = null;
+
+        function showGallery(index) {
+            gallerySlides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('opacity-0', 'pointer-events-none');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            galleryDots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-gray-300', 'w-2.5');
+                    dot.classList.add('bg-google-blue', 'w-3');
+                } else {
+                    dot.classList.remove('bg-google-blue', 'w-3');
+                    dot.classList.add('bg-gray-300', 'w-2.5');
+                }
+            });
+
+            currentGalleryIndex = index;
+        }
+
+        function nextGallery() {
+            const nextIdx = (currentGalleryIndex + 1) % gallerySlides.length;
+            showGallery(nextIdx);
+        }
+
+        function prevGallery() {
+            const prevIdx = (currentGalleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
+            showGallery(prevIdx);
+        }
+
+        function startGalleryTimer() {
+            if (!galleryTimer) {
+                galleryTimer = setInterval(nextGallery, 3500);
+            }
+        }
+
+        function stopGalleryTimer() {
+            if (galleryTimer) {
+                clearInterval(galleryTimer);
+                galleryTimer = null;
+            }
+        }
+
+        prevGalleryBtn.addEventListener('click', () => {
+            prevGallery();
+            stopGalleryTimer();
+            startGalleryTimer();
+        });
+
+        nextGalleryBtn.addEventListener('click', () => {
+            nextGallery();
+            stopGalleryTimer();
+            startGalleryTimer();
+        });
+
+        galleryDots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                showGallery(idx);
+                stopGalleryTimer();
+                startGalleryTimer();
+            });
+        });
+
+        startGalleryTimer();
     </script>
 </body>
 </html>
