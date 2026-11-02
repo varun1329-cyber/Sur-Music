@@ -1,763 +1,275 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sur Music Classes | Hindustani Classical Vocal School - Indiranagar</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Roboto & Google Sans style -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        google: {
-                            blue: '#1a73e8',
-                            blueHover: '#1557b0',
-                            blueLight: '#e8f0fe',
-                            red: '#ea4335',
-                            yellow: '#fbbc04',
-                            green: '#34a853',
-                            greenLight: '#e6f4ea',
-                            grayBg: '#f8f9fa',
-                            cardBg: '#ffffff',
-                            border: '#dadce0',
-                            textPrimary: '#202124',
-                            textSecondary: '#5f6368'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Roboto', 'Google Sans', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
-                    },
-                    boxShadow: {
-                        'google-card': '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)',
-                        'google-hover': '0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15)',
-                        'google-button': '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #f8f9fa;
-            color: #202124;
-            font-family: 'Roboto', sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-        .glass-header {
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            background: rgba(255, 255, 255, 0.85);
-            border-bottom: 1px solid rgba(218, 220, 224, 0.9);
-            box-shadow: 0 1px 0 rgba(60, 64, 67, 0.08), 0 4px 16px rgba(60, 64, 67, 0.06);
-        }
-        .glass-header .nav-link {
-            transition: all 0.2s ease;
-        }
-        .glass-header .nav-link:hover {
-            background: rgba(26, 115, 232, 0.08);
-            color: #1a73e8;
-        }
-        .gallery-slide {
-            transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
-            transform: scale(1.02);
-        }
-        .gallery-slide.opacity-100 {
-            transform: scale(1);
-        }
-        .gallery-slide.opacity-0 {
-            transform: scale(1.08);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sur Music Classes | Hindustani Classical Vocal School, Indiranagar</title>
+<meta name="description" content="Hindustani classical vocal training with Hema Shah in Indiranagar, Bengaluru. Onsite and online classes for children and adults.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbf7f0;--surface:#fff;--ink:#1d1a2f;--muted:#5d5a70;--line:#e6dfd2;
+  --indigo:#2b2a63;--saffron:#d9741a;--saffron-soft:#fbe9d6;--on-accent:#fff;
+  --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#14132a;--surface:#1d1c38;--ink:#f2eee6;--muted:#b0adc4;--line:#35335a;
+  --indigo:#c9c6ff;--saffron:#f0974a;--saffron-soft:#3a2a22;--on-accent:#14132a;}}
+:root[data-theme="dark"]{
+  --bg:#14132a;--surface:#1d1c38;--ink:#f2eee6;--muted:#b0adc4;--line:#35335a;
+  --indigo:#c9c6ff;--saffron:#f0974a;--saffron-soft:#3a2a22;--on-accent:#14132a;}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0;letter-spacing:-.01em}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--saffron)}
+section{padding:72px 0}
+h2{font-size:clamp(28px,4vw,38px);margin:8px 0 14px}
+.lead{color:var(--muted);max-width:56ch;margin:0}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-weight:700;font-size:19px}
+.mark{width:34px;height:34px;border-radius:50%;background:var(--indigo);color:var(--bg);display:grid;place-items:center;font-size:15px}
+nav{display:flex;gap:22px;font-size:14px;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--saffron)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:var(--saffron);color:var(--on-accent);font-weight:600;font-size:14px;text-decoration:none;border:1px solid var(--saffron)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn:hover{filter:brightness(1.07)}
+@media(max-width:760px){nav{display:none}}
+
+/* hero */
+.hero{padding:40px 20px 56px}
+.hero h1{font-size:clamp(38px,7vw,68px);max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--saffron)}
+.hero p{font-size:17px;color:var(--muted);max-width:56ch;margin:20px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.scale{display:flex;align-items:flex-end;gap:10px;height:96px;margin-top:48px}
+.scale div{flex:1;border-radius:8px 8px 0 0;background:linear-gradient(var(--saffron),var(--indigo));position:relative;opacity:.9}
+.scale span{position:absolute;bottom:-26px;left:0;right:0;text-align:center;font-size:12px;color:var(--muted);font-weight:500}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.facts b{color:var(--ink)}
+
+/* cards */
+.grid{display:grid;gap:18px;margin-top:32px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.num{font-family:var(--serif);font-size:14px;color:var(--saffron);font-weight:700;margin-bottom:14px;display:block}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.alt .card{background:var(--bg)}
+
+/* teacher */
+.intro{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.intro .name{font-family:var(--serif);font-size:24px;font-weight:700;line-height:1.2;margin-top:2px}
+.intro small{color:var(--muted);font-size:13px}
+.intro .avatar{width:64px;height:64px;font-size:23px;flex:none}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags .tag{margin-top:0}
+.avatar{width:96px;height:96px;border-radius:50%;background:var(--saffron-soft);color:var(--saffron);display:grid;place-items:center;font-family:var(--serif);font-size:34px;font-weight:700}
+.tag{display:inline-block;margin-top:14px;padding:4px 12px;border-radius:999px;background:var(--saffron-soft);color:var(--saffron);font-size:13px;font-weight:600}
+
+/* reviews */
+.score{display:flex;align-items:center;gap:14px;margin:18px 0 0}
+.score strong{font-family:var(--serif);font-size:48px;line-height:1}
+.stars{color:var(--saffron);letter-spacing:2px;font-size:18px}
+.score small{display:block;color:var(--muted);font-size:13px}
+.quote h3{font-size:17px;font-family:var(--sans);font-weight:600}
+.quote .who{display:block;margin-top:14px;font-size:13px;font-weight:500;color:var(--saffron)}
+
+/* review carousel */
+.carousel{margin-top:28px;max-width:720px}
+.slides{display:grid}
+.slide{grid-area:1/1;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s}
+.slide.on{opacity:1;visibility:visible}
+.slide h3{font-size:22px;margin-bottom:10px}
+.slide p{font-size:17px;color:var(--ink)}
+.ctrl{display:flex;align-items:center;justify-content:space-between;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}
+.dots{display:flex;gap:8px}
+.dot{width:9px;height:9px;padding:0;border-radius:99px;border:0;background:var(--line);cursor:pointer;transition:width .3s,background .3s}
+.dot.on{width:26px;background:var(--saffron)}
+.arrows{display:flex;gap:8px}
+.arrows button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:16px}
+.arrows button:hover{border-color:var(--saffron);color:var(--saffron)}
+
+/* gallery */
+.gal{margin-top:32px;max-width:720px;margin-inline:auto;background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:14px}
+.frame{position:relative;aspect-ratio:16/10;border-radius:12px;overflow:hidden}
+.frame .slide{position:absolute;inset:0;grid-area:auto;display:grid;place-items:center;background:linear-gradient(135deg,var(--saffron-soft),var(--line));color:var(--muted);font-size:14px;text-align:center}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gal .ctrl{margin-top:14px;padding-top:0;border-top:0}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;margin-top:32px}
+@media(max-width:760px){.visit{grid-template-columns:1fr}}
+.row{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.row:last-of-type{border-bottom:0}
+.row span:last-child{font-weight:600;color:var(--indigo)}
+.label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+.phone{font-family:var(--serif);font-size:28px;font-weight:700;text-decoration:none;color:var(--indigo);display:block;margin:4px 0 22px}
+address{font-style:normal;margin-bottom:22px}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+</style>
 </head>
-<body class="selection:bg-google-blueLight selection:text-google-blue">
+<body>
 
-    <!-- Header Navigation -->
-    <header id="top" class="glass-header">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                
-                <!-- Logo -->
-                <a href="#top" class="flex items-center space-x-3 group">
-                    <img src="./def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Classes Logo" class="h-14 w-14 sm:h-16 sm:w-16 object-contain bg-transparent shrink-0">
-                    <div>
-                        <span class="text-lg font-medium tracking-tight text-google-textPrimary block leading-none">
-                            <span style="color: #000000; font-weight: bold; font-size: calc(100% + 2pt);">
-                                Sur Music Classes
-                            </span>
-                        </span>
-                        <span class="text-[10px] font-normal tracking-wide text-google-textSecondary block mt-0.5">
-                            Hindustani Classical Vocal School
-                        </span>
-                    </div>
-                </a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top"><span class="mark">सु</span>Sur Music Classes</a>
+    <nav>
+      <a href="#learn">Learn</a><a href="#reviews">Reviews</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a>
+    </nav>
+    <a class="btn" href="tel:+919241243456">Call now</a>
+  </div>
+</header>
 
-                <!-- Navigation Links -->
-                <nav class="hidden md:flex items-center space-x-4 text-sm font-medium">
-                    <a href="#about" class="nav-link text-google-textSecondary px-3 py-1.5 rounded-md">About</a>
-                    <a href="#reviews" class="nav-link text-google-textSecondary px-3 py-1.5 rounded-md">Reviews</a>
-                    <a href="#formats" class="nav-link text-google-textSecondary px-3 py-1.5 rounded-md">Formats</a>
-                    <a href="#gallery" class="nav-link text-google-textSecondary px-3 py-1.5 rounded-md">Gallery</a>
-                    <a href="#hours" class="nav-link text-google-textSecondary px-3 py-1.5 rounded-md">Hours</a>
-                    <a href="#contact" class="nav-link text-google-blue font-medium px-3 py-1.5 rounded-md hover:bg-google-blueLight">Contact Us</a>
-                </nav>
+<main id="top">
+  <div class="wrap hero">
+    <div class="intro">
+      <div class="avatar">HS</div>
+      <div><span class="eyebrow">Hindustani classical vocal school</span><div class="name">Hema Shah</div><small>Lead instructor · Indiranagar, Bengaluru</small></div>
+    </div>
+    <h1>Find your <em>Sur</em>, one patient note at a time.</h1>
+    <p>Sur Music Classes is dedicated to helping students develop deep musical sensitivity, precision in note accuracy (Sur), rhythm control (Taal), and foundational breathing techniques for long-lasting vocal health and expressive performance.</p>
+    <div class="tags"><span class="tag">Banaras Gharana</span><span class="tag">Children &amp; adults</span><span class="tag">Onsite &amp; online</span></div>
+    <div class="scale" aria-hidden="true">
+      <div style="height:30%"><span>Sa</span></div><div style="height:42%"><span>Re</span></div>
+      <div style="height:54%"><span>Ga</span></div><div style="height:62%"><span>Ma</span></div>
+      <div style="height:74%"><span>Pa</span></div><div style="height:86%"><span>Dha</span></div>
+      <div style="height:94%"><span>Ni</span></div><div style="height:100%"><span>Sa’</span></div>
+    </div>
+    <div class="facts" style="margin-top:64px">
+      <span><b>4.8 ★</b> on Google (~50 reviews)</span>
+      <span><b>Open 7 days</b> a week</span>
+    </div>
+  </div>
 
-                <!-- Mobile Navigation Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-google-textSecondary hover:text-google-textPrimary p-2 rounded-full hover:bg-gray-100" aria-label="Toggle Navigation">
-                    <i class="fa-solid fa-bars text-lg"></i>
-                </button>
-            </div>
+  <section id="learn" class="alt">
+    <div class="wrap">
+      <span class="eyebrow">Curriculum</span>
+      <h2>Three foundations of every lesson</h2>
+      <p class="lead">Precise notes (Sur), steady rhythm (Taal) and healthy breath, built in a structured order.</p>
+      <div class="grid g3">
+        <div class="card"><span class="num">01</span><h3>Classical repertoire</h3><p>Swara, alankar, raga and bandish, with taal exercises shaped for vocalists.</p></div>
+        <div class="card"><span class="num">02</span><h3>Voice culture</h3><p>Exercises that widen range, hold pitch steady and enrich tone.</p></div>
+        <div class="card"><span class="num">03</span><h3>Breath control</h3><p>Classical breathing methods that build stamina and sustain long notes with ease.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <span class="eyebrow">Student voices</span>
+      <h2>Loved for patience and progress</h2>
+      <div class="score">
+        <strong>4.8</strong>
+        <div><div class="stars">★★★★★</div><small>Google rating, based on ~50 reviews</small></div>
+      </div>
+      <div class="card quote carousel" id="carousel" aria-roledescription="carousel" aria-label="Student reviews">
+        <div class="slides" aria-live="off">
+          <div class="slide on"><h3>Encouraging, yet exacting</h3><p>Long-term students say every lesson feels supportive while still pushing technique forward.</p><span class="who">Long-term student</span></div>
+          <div class="slide"><h3>Confidence for nervous singers</h3><p>Beginners and working professionals credit her with building both the basics and the courage to perform.</p><span class="who">Student community</span></div>
+          <div class="slide"><h3>Warm with children</h3><p>Parents recommend her friendly, nurturing approach for young learners.</p><span class="who">Parent</span></div>
+          <div class="slide"><h3>Rock-solid fundamentals</h3><p>Advanced students value the structured Banaras Gharana grounding in Hindustani classical music.</p><span class="who">Classical vocal student</span></div>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-b border-google-border px-6 py-3 space-y-1">
-            <a href="#about" class="block py-1.5 text-google-textSecondary hover:text-google-blue text-sm font-medium">About</a>
-            <a href="#reviews" class="block py-1.5 text-google-textSecondary hover:text-google-blue text-sm font-medium">Reviews</a>
-            <a href="#formats" class="block py-1.5 text-google-textSecondary hover:text-google-blue text-sm font-medium">Formats</a>
-            <a href="#gallery" class="block py-1.5 text-google-textSecondary hover:text-google-blue text-sm font-medium">Gallery</a>
-            <a href="#hours" class="block py-1.5 text-google-textSecondary hover:text-google-blue text-sm font-medium">Hours</a>
-            <a href="#contact" class="block py-1.5 text-google-blue font-semibold text-sm">Contact Us</a>
+        <div class="ctrl">
+          <div class="dots"><button class="dot on" aria-label="Review 1"></button><button class="dot" aria-label="Review 2"></button><button class="dot" aria-label="Review 3"></button><button class="dot" aria-label="Review 4"></button></div>
+          <div class="arrows"><button class="prev" aria-label="Previous review">‹</button><button class="next" aria-label="Next review">›</button></div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <!-- Overview Section -->
-        <section id="about" class="py-10 md:py-12">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-                
-                <div class="text-center max-w-2xl mx-auto space-y-1">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Overview</span>
-                    <h1 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Authentic Vocal Guidance</h1>
-                </div>
+  <section id="join" class="alt">
+    <div class="wrap">
+      <span class="eyebrow">How to join</span>
+      <h2>Learn where it suits you</h2>
+      <div class="grid g2">
+        <div class="card"><h3>Studio or online</h3><p>Attend in person at the Indiranagar studio, or join live online classes from anywhere.</p></div>
+        <div class="card"><h3>Children &amp; families</h3><p>Concessionary fees for children and for family members who enrol together.</p></div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Google Card Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
-                    
-                    <!-- Instructor Info Card -->
-                    <div class="md:col-span-7 bg-white p-6 rounded-2xl border border-google-border shadow-google-card space-y-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center font-bold text-lg border border-google-blue/20">
-                                HS
-                            </div>
-                            <div>
-                                <h2 class="text-lg font-bold text-google-textPrimary">Hema Shah</h2>
-                                <p class="text-xs text-google-blue font-medium mt-0.5">Lead Music Instructor</p>
-                            </div>
-                        </div>
-                        <p class="text-google-textSecondary text-sm leading-relaxed">
-                            Sur Music Classes is dedicated to helping students develop deep musical sensitivity, precision in note accuracy (Sur), rhythm control (Taal), and foundational breathing techniques for long-lasting vocal health and expressive performance.
-                        </p>
-                        <div class="pt-3 border-t border-google-border flex items-center justify-between gap-2 text-xs text-google-textSecondary">
-                            <span class="inline-flex items-center font-medium">
-                                <i class="fa-solid fa-location-dot text-google-red mr-1.5"></i> Indiranagar, Bengaluru
-                            </span>
-                            <span class="bg-google-greenLight text-google-green px-2.5 py-0.5 rounded-full font-medium text-[11px]">Verified Academy</span>
-                        </div>
-                    </div>
-
-                    <!-- Highlights Card -->
-                    <div class="md:col-span-5 bg-white p-6 rounded-2xl border border-google-border shadow-google-card flex flex-col justify-between space-y-4">
-                        <div class="space-y-3">
-                            <div class="w-9 h-9 rounded-full bg-google-greenLight text-google-green flex items-center justify-center text-base">
-                                <i class="fa-solid fa-check"></i>
-                            </div>
-                            <h2 class="text-xl font-bold text-google-textPrimary">Structured Classical Vocal Training</h2>
-                            <p class="text-google-textSecondary text-sm leading-relaxed">
-                                Highly appreciated by learners for structured vocal exercises, personalized attention, and flexible scheduling.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Google Review Auto-Slide Block -->
-                <div id="reviews" class="bg-white p-6 sm:p-8 rounded-2xl border border-google-border shadow-google-card space-y-6 relative overflow-hidden">
-                    
-                    <!-- Rating Header Badge -->
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-google-border">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 rounded-full bg-google-grayBg flex items-center justify-center border border-google-border shadow-sm">
-                                <i class="fa-brands fa-google text-lg text-google-blue"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-base font-bold text-google-textPrimary flex items-center gap-1.5">
-                                    Google Reviews
-                                    <span class="text-xs bg-google-blueLight text-google-blue px-2 py-0.5 rounded-full font-normal">4.8 / 5.0</span>
-                                </h3>
-                                <p class="text-xs text-google-textSecondary">What Students Say About Hemaji</p>
-                            </div>
-                        </div>
-
-                        <!-- Rating & Stars -->
-                        <div class="flex items-center space-x-3 bg-google-grayBg px-4 py-2 rounded-xl border border-google-border self-start sm:self-auto">
-                            <span class="text-2xl font-bold text-google-textPrimary leading-none">4.8</span>
-                            <div>
-                                <div class="flex text-google-yellow text-xs space-x-0.5">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <span class="text-[11px] text-google-textSecondary font-medium">Based on ~50 student reviews</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Review Carousel Container -->
-                    <div class="relative min-h-[160px] sm:min-h-[130px]">
-                        
-                        <!-- Slide 1: Incredible Patience -->
-                        <div class="review-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out flex flex-col justify-between">
-                            <div class="space-y-2">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xs font-bold uppercase tracking-wider text-google-blue flex items-center gap-1.5">
-                                        <i class="fa-solid fa-heart text-google-red"></i> Incredible Patience
-                                    </span>
-                                    <div class="flex text-google-yellow text-xs">
-                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                    </div>
-                                </div>
-                                <p class="text-sm sm:text-base text-google-textPrimary leading-relaxed">
-                                    Multiple long-term students note that Hemaji is profoundly patient. One reviewer highlighted that she has the rare ability to make each lesson feel encouraging while still pushing students toward technical improvement.
-                                </p>
-                            </div>
-                            <p class="text-xs text-google-textSecondary font-medium mt-3">— Long-term Student Review</p>
-                        </div>
-
-                        <!-- Slide 2: Confidence Building -->
-                        <div class="review-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col justify-between pointer-events-none">
-                            <div class="space-y-2">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xs font-bold uppercase tracking-wider text-google-blue flex items-center gap-1.5">
-                                        <i class="fa-solid fa-bolt text-google-yellow"></i> Confidence Building
-                                    </span>
-                                    <div class="flex text-google-yellow text-xs">
-                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                    </div>
-                                </div>
-                                <p class="text-sm sm:text-base text-google-textPrimary leading-relaxed">
-                                    Beginners and software professionals alike share that her supportive nature helps nervous singers build the basic mechanics and confidence to perform publicly.
-                                </p>
-                            </div>
-                            <p class="text-xs text-google-textSecondary font-medium mt-3">— Student Community Feedback</p>
-                        </div>
-
-                        <!-- Slide 3: Nurturing Environment -->
-                        <div class="review-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col justify-between pointer-events-none">
-                            <div class="space-y-2">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xs font-bold uppercase tracking-wider text-google-blue flex items-center gap-1.5">
-                                        <i class="fa-solid fa-child text-google-green"></i> Nurturing Environment
-                                    </span>
-                                    <div class="flex text-google-yellow text-xs">
-                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                    </div>
-                                </div>
-                                <p class="text-sm sm:text-base text-google-textPrimary leading-relaxed">
-                                    Parents highly recommend her for children, describing her teaching approach as friendly, warm, and uniquely encouraging.
-                                </p>
-                            </div>
-                            <p class="text-xs text-google-textSecondary font-medium mt-3">— Parent Recommendation</p>
-                        </div>
-
-                        <!-- Slide 4: Solid Fundamentals -->
-                        <div class="review-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out flex flex-col justify-between pointer-events-none">
-                            <div class="space-y-2">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-xs font-bold uppercase tracking-wider text-google-blue flex items-center gap-1.5">
-                                        <i class="fa-solid fa-music text-google-blue"></i> Solid Fundamentals
-                                    </span>
-                                    <div class="flex text-google-yellow text-xs">
-                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                                    </div>
-                                </div>
-                                <p class="text-sm sm:text-base text-google-textPrimary leading-relaxed">
-                                    Intermediate and advanced students note that her structured focus on Banaras Gharana techniques gives them a rock-solid understanding of Hindustani classical music.
-                                </p>
-                            </div>
-                            <p class="text-xs text-google-textSecondary font-medium mt-3">— Classical Vocal Student</p>
-                        </div>
-
-                    </div>
-
-                    <!-- Controls & Progress -->
-                    <div class="pt-4 border-t border-google-border flex items-center justify-between">
-                        <!-- Arrows -->
-                        <div class="flex items-center space-x-2">
-                            <button id="prev-review-btn" class="w-8 h-8 rounded-full border border-google-border flex items-center justify-center text-google-textSecondary hover:text-google-blue hover:border-google-blue hover:bg-google-blueLight transition-all">
-                                <i class="fa-solid fa-chevron-left text-xs"></i>
-                            </button>
-                            <button id="next-review-btn" class="w-8 h-8 rounded-full border border-google-border flex items-center justify-center text-google-textSecondary hover:text-google-blue hover:border-google-blue hover:bg-google-blueLight transition-all">
-                                <i class="fa-solid fa-chevron-right text-xs"></i>
-                            </button>
-                        </div>
-
-                        <!-- Dots -->
-                        <div class="flex items-center space-x-1.5" id="review-dots">
-                            <button class="review-dot w-2.5 h-2.5 rounded-full bg-google-blue transition-all" aria-label="Slide 1"></button>
-                            <button class="review-dot w-2 h-2 rounded-full bg-gray-300 transition-all" aria-label="Slide 2"></button>
-                            <button class="review-dot w-2 h-2 rounded-full bg-gray-300 transition-all" aria-label="Slide 3"></button>
-                            <button class="review-dot w-2 h-2 rounded-full bg-gray-300 transition-all" aria-label="Slide 4"></button>
-                        </div>
-
-                        <!-- Pause / Auto indicator -->
-                        <button id="pause-review-btn" class="text-xs text-google-textSecondary hover:text-google-blue font-medium flex items-center gap-1.5 px-2 py-1 rounded hover:bg-gray-100 transition-colors">
-                            <i class="fa-solid fa-pause text-[10px]"></i>
-                            <span id="pause-text">Auto-slides every 5s</span>
-                        </button>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Core Focus Section -->
-        <section id="focus" class="py-10 md:py-12 bg-white border-y border-google-border">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-                
-                <div class="text-center max-w-2xl mx-auto space-y-1">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Curriculum</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Core Musical Focus</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <div class="bg-google-grayBg p-5 rounded-2xl border border-google-border hover:shadow-md transition-shadow space-y-3">
-                        <div class="w-9 h-9 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center text-base">
-                            <i class="fa-solid fa-music"></i>
-                        </div>
-                        <h3 class="text-base font-bold text-google-textPrimary">Hindustani Classical Vocal</h3>
-                        <p class="text-google-textSecondary text-xs sm:text-sm leading-relaxed">
-                            Structured learning of Swara, Alankar, Raga bandish, and rhythmic taal exercises tailored for vocalists.
-                        </p>
-                    </div>
-
-                    <div class="bg-google-grayBg p-5 rounded-2xl border border-google-border hover:shadow-md transition-shadow space-y-3">
-                        <div class="w-9 h-9 rounded-full bg-google-greenLight text-google-green flex items-center justify-center text-base">
-                            <i class="fa-solid fa-microphone"></i>
-                        </div>
-                        <h3 class="text-base font-bold text-google-textPrimary">Voice Culture & Pitching</h3>
-                        <p class="text-google-textSecondary text-xs sm:text-sm leading-relaxed">
-                            Voice culture exercises designed to widen vocal range, enhance pitch consistency, and improve tonal resonance.
-                        </p>
-                    </div>
-
-                    <div class="bg-google-grayBg p-5 rounded-2xl border border-google-border hover:shadow-md transition-shadow space-y-3">
-                        <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-base">
-                            <i class="fa-solid fa-wind"></i>
-                        </div>
-                        <h3 class="text-base font-bold text-google-textPrimary">Breathing Techniques</h3>
-                        <p class="text-google-textSecondary text-xs sm:text-sm leading-relaxed">
-                            Specialized breath control methods derived from classical practice to build lung stamina and sustain long notes effortlessly.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Formats & Options -->
-        <section id="formats" class="py-10 md:py-12">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-                <div class="text-center max-w-2xl mx-auto space-y-1">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Learning Options</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Flexible Class Formats</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div class="bg-white p-6 rounded-2xl border border-google-border shadow-google-card flex items-start space-x-4">
-                        <div class="w-9 h-9 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-chalkboard-user"></i>
-                        </div>
-                        <div class="space-y-1">
-                            <h3 class="text-base font-bold text-google-textPrimary">Onsite & Online Availability</h3>
-                            <p class="text-google-textSecondary text-xs sm:text-sm leading-relaxed">
-                                Join in-person sessions at our Indiranagar studio or attend interactive online classes from any location.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl border border-google-border shadow-google-card flex items-start space-x-4">
-                        <div class="w-9 h-9 rounded-full bg-google-greenLight text-google-green flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-users"></i>
-                        </div>
-                        <div class="space-y-1">
-                            <h3 class="text-base font-bold text-google-textPrimary">Children & Family Options</h3>
-                            <p class="text-google-textSecondary text-xs sm:text-sm leading-relaxed">
-                                Concessionary fee structures offered for children and family members enrolling together for music classes.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery -->
-        <section id="gallery" class="py-10 md:py-12 bg-white border-y border-google-border">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center">
-                <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Moments</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Class & Performance Gallery</h2>
-
-                <div class="relative w-full h-64 sm:h-80 overflow-hidden rounded-2xl border border-google-border bg-google-grayBg shadow-google-card">
-                    <div class="gallery-slide absolute inset-0 opacity-100">
-                        <img src="./unnamed.jpg" alt="Music class" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-2.jpg" alt="Music performance" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-3.jpg" alt="Students singing" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-4.jpg" alt="Class practice" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-5.jpg" alt="Performance scene" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-6.jpg" alt="Class session" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-7.jpg" alt="Vocal training" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                    </div>
-                    <div class="gallery-slide absolute inset-0 opacity-0 pointer-events-none">
-                        <img src="./unnamed-8.jpg" alt="Recital moment" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-between pt-1">
-                    <div class="flex items-center space-x-2">
-                        <button id="prev-gallery-btn" class="w-9 h-9 rounded-full border border-google-border bg-white text-google-textSecondary hover:text-google-blue hover:border-google-blue hover:bg-google-blueLight transition-all flex items-center justify-center">
-                            <i class="fa-solid fa-chevron-left text-sm"></i>
-                        </button>
-                        <button id="next-gallery-btn" class="w-9 h-9 rounded-full border border-google-border bg-white text-google-textSecondary hover:text-google-blue hover:border-google-blue hover:bg-google-blueLight transition-all flex items-center justify-center">
-                            <i class="fa-solid fa-chevron-right text-sm"></i>
-                        </button>
-                    </div>
-
-                    <div id="gallery-dots" class="flex items-center space-x-2">
-                        <button class="gallery-dot w-3 h-3 rounded-full bg-google-blue transition-all" aria-label="Gallery slide 1"></button>
-                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 2"></button>
-                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 3"></button>
-                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 4"></button>
-                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 5"></button>
-                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 6"></button>
-                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 7"></button>
-                        <button class="gallery-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" aria-label="Gallery slide 8"></button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hours Section -->
-        <section id="hours" class="py-10 md:py-12">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-                <div class="text-center space-y-1">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Schedule</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Class Hours</h2>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-google-border shadow-google-card space-y-3">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-google-border gap-2">
-                        <div class="flex items-center space-x-3">
-                            <i class="fa-regular fa-clock text-google-blue"></i>
-                            <span class="text-google-textPrimary font-medium text-sm">Monday – Friday</span>
-                        </div>
-                        <span class="text-google-blue font-medium text-xs sm:text-sm bg-google-blueLight px-3 py-1 rounded-full self-start sm:self-auto">
-                            12:00 PM – 8:30 PM
-                        </span>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <div class="flex items-center space-x-3">
-                            <i class="fa-regular fa-clock text-google-blue"></i>
-                            <span class="text-google-textPrimary font-medium text-sm">Saturday – Sunday</span>
-                        </div>
-                        <span class="text-google-blue font-medium text-xs sm:text-sm bg-google-blueLight px-3 py-1 rounded-full self-start sm:self-auto">
-                            10:00 AM – 8:30 PM
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Location & Contact Info -->
-        <section id="contact" class="py-10 md:py-12 bg-white border-t border-google-border">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-                <div class="text-center max-w-2xl mx-auto space-y-1">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-google-blue">Contact Details</span>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-google-textPrimary">Address & Contact</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                    <div class="md:col-span-7 bg-google-grayBg p-6 rounded-2xl border border-google-border space-y-4">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-9 h-9 rounded-full bg-google-red/10 text-google-red flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div class="space-y-1">
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-google-textSecondary">Address</h3>
-                                <p class="text-google-textPrimary text-sm leading-relaxed">
-                                    PH2, 4th Floor, East Block, RJ Gardens,<br>
-                                    17th E Cross Rd, Eshwara Layout, Indiranagar,<br>
-                                    Bengaluru, Karnataka 560008, India
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4 pt-3 border-t border-google-border">
-                            <div class="w-9 h-9 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div class="space-y-1">
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-google-textSecondary">Phone Number</h3>
-                                <a href="tel:+919241243456" class="text-google-blue font-bold text-base hover:underline block">
-                                    +91 92412 43456
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-5 bg-google-grayBg p-6 rounded-2xl border border-google-border flex flex-col justify-between space-y-4 text-center">
-                        <div class="space-y-2">
-                            <div class="w-10 h-10 rounded-full bg-google-blueLight text-google-blue flex items-center justify-center mx-auto text-lg">
-                                <i class="fa-solid fa-map-location-dot"></i>
-                            </div>
-                            <h3 class="text-base font-bold text-google-textPrimary">Find Us on Google Maps</h3>
-                            <p class="text-google-textSecondary text-xs leading-relaxed">
-                                Get directions directly to our Indiranagar studio on Google Maps.
-                            </p>
-                        </div>
-
-                        <div class="pt-2">
-                            <a href="https://maps.google.com/?q=Indiranagar,+Bengaluru" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-google-blue text-white px-4 py-2.5 rounded-full font-medium text-sm hover:bg-google-blueHover transition-colors shadow-google-button">
-                                <span>Get Directions</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-google-border py-6 text-xs text-google-textSecondary">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div class="flex items-center space-x-3">
-                <img src="./def28a52-9209-49d1-8906-cf6017b7bb0d.png" alt="Sur Music Classes Logo" class="h-9 w-9 object-contain bg-transparent shrink-0">
-                <span class="text-google-textPrimary font-bold text-sm">Sur Music Classes</span>
-            </div>
-            <p>&copy; <span id="year"></span> Sur Music Classes. All rights reserved.</p>
-            <a href="#top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="inline-flex items-center space-x-1.5 text-google-blue font-medium hover:underline">
-                <span>Back to top</span>
-                <i class="fa-solid fa-arrow-up text-[10px]"></i>
-            </a>
+  <section id="gallery">
+    <div class="wrap">
+      <span class="eyebrow">Moments</span>
+      <h2>Inside the classroom</h2>
+      <div class="gal" id="gallery-car" aria-roledescription="carousel" aria-label="Photo gallery">
+        <div class="frame">
+          <div class="slide on">Music class<img src="./unnamed.jpg" alt="Music class" onerror="this.remove()"></div>
+          <div class="slide">Performance<img src="./unnamed-2.jpg" alt="Music performance" onerror="this.remove()"></div>
+          <div class="slide">Singing<img src="./unnamed-3.jpg" alt="Students singing" onerror="this.remove()"></div>
+          <div class="slide">Practice<img src="./unnamed-4.jpg" alt="Class practice" onerror="this.remove()"></div>
+          <div class="slide">Stage<img src="./unnamed-5.jpg" alt="Performance scene" onerror="this.remove()"></div>
+          <div class="slide">Session<img src="./unnamed-6.jpg" alt="Class session" onerror="this.remove()"></div>
+          <div class="slide">Training<img src="./unnamed-7.jpg" alt="Vocal training" onerror="this.remove()"></div>
+          <div class="slide">Recital<img src="./unnamed-8.jpg" alt="Recital moment" onerror="this.remove()"></div>
         </div>
-    </footer>
+        <div class="ctrl">
+          <div class="dots"><button class="dot on" aria-label="Photo 1"></button><button class="dot" aria-label="Photo 2"></button><button class="dot" aria-label="Photo 3"></button><button class="dot" aria-label="Photo 4"></button><button class="dot" aria-label="Photo 5"></button><button class="dot" aria-label="Photo 6"></button><button class="dot" aria-label="Photo 7"></button><button class="dot" aria-label="Photo 8"></button></div>
+          <div class="arrows"><button class="prev" aria-label="Previous photo">‹</button><button class="next" aria-label="Next photo">›</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- JavaScript for Mobile Menu, Google Reviews Auto-Slider & Gallery Auto-Slider -->
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+  <section id="visit" class="alt">
+    <div class="wrap">
+      <span class="eyebrow">Visit</span>
+      <h2>Hours, address &amp; contact</h2>
+      <div class="visit">
+        <div class="card">
+          <p class="label">Class hours</p>
+          <div class="row"><span>Monday – Friday</span><span>12:00 PM – 8:30 PM</span></div>
+          <div class="row"><span>Saturday – Sunday</span><span>10:00 AM – 8:30 PM</span></div>
+        </div>
+        <div class="card">
+          <p class="label">Call</p>
+          <a class="phone" href="tel:+919241243456">+91 92412 43456</a>
+          <p class="label">Studio</p>
+          <address>PH2, 4th Floor, East Block, RJ Gardens,<br>17th E Cross Rd, Eshwara Layout, Indiranagar,<br>Bengaluru, Karnataka 560008</address>
+          <a class="btn" href="https://maps.google.com/?q=Indiranagar,+Bengaluru" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Google Reviews Auto-Slider Logic (Rotates every 5 seconds)
-        const reviewSlides = document.querySelectorAll('.review-slide');
-        const reviewDots = document.querySelectorAll('.review-dot');
-        const prevBtn = document.getElementById('prev-review-btn');
-        const nextBtn = document.getElementById('next-review-btn');
-        const pauseBtn = document.getElementById('pause-review-btn');
-        const pauseText = document.getElementById('pause-text');
-
-        let currentReviewIndex = 0;
-        let reviewTimer = null;
-        let isPlaying = true;
-
-        function showReview(index) {
-            reviewSlides.forEach((slide, i) => {
-                if (i === index) {
-                    slide.classList.remove('opacity-0', 'pointer-events-none');
-                    slide.classList.add('opacity-100');
-                } else {
-                    slide.classList.remove('opacity-100');
-                    slide.classList.add('opacity-0', 'pointer-events-none');
-                }
-            });
-
-            reviewDots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.remove('bg-gray-300', 'w-2');
-                    dot.classList.add('bg-google-blue', 'w-2.5');
-                } else {
-                    dot.classList.remove('bg-google-blue', 'w-2.5');
-                    dot.classList.add('bg-gray-300', 'w-2');
-                }
-            });
-
-            currentReviewIndex = index;
-        }
-
-        function nextReview() {
-            const nextIdx = (currentReviewIndex + 1) % reviewSlides.length;
-            showReview(nextIdx);
-        }
-
-        function prevReview() {
-            const prevIdx = (currentReviewIndex - 1 + reviewSlides.length) % reviewSlides.length;
-            showReview(prevIdx);
-        }
-
-        function startTimer() {
-            if (!reviewTimer) {
-                reviewTimer = setInterval(nextReview, 5000);
-            }
-        }
-
-        function stopTimer() {
-            if (reviewTimer) {
-                clearInterval(reviewTimer);
-                reviewTimer = null;
-            }
-        }
-
-        nextBtn.addEventListener('click', () => {
-            nextReview();
-            if (isPlaying) { stopTimer(); startTimer(); }
-        });
-
-        prevBtn.addEventListener('click', () => {
-            prevReview();
-            if (isPlaying) { stopTimer(); startTimer(); }
-        });
-
-        reviewDots.forEach((dot, idx) => {
-            dot.addEventListener('click', () => {
-                showReview(idx);
-                if (isPlaying) { stopTimer(); startTimer(); }
-            });
-        });
-
-        pauseBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                stopTimer();
-                isPlaying = false;
-                pauseBtn.querySelector('i').className = 'fa-solid fa-play text-[10px]';
-                pauseText.textContent = 'Paused';
-            } else {
-                startTimer();
-                isPlaying = true;
-                pauseBtn.querySelector('i').className = 'fa-solid fa-pause text-[10px]';
-                pauseText.textContent = 'Auto-slides every 5s';
-            }
-        });
-
-        startTimer();
-
-        // Gallery Image Slider Logic (Auto-slides every 3.5 seconds)
-        const gallerySlides = document.querySelectorAll('.gallery-slide');
-        const galleryDots = document.querySelectorAll('.gallery-dot');
-        const prevGalleryBtn = document.getElementById('prev-gallery-btn');
-        const nextGalleryBtn = document.getElementById('next-gallery-btn');
-
-        let currentGalleryIndex = 0;
-        let galleryTimer = null;
-
-        function showGallery(index) {
-            gallerySlides.forEach((slide, i) => {
-                const isActive = i === index;
-                slide.classList.toggle('opacity-100', isActive);
-                slide.classList.toggle('opacity-0', !isActive);
-                slide.classList.toggle('pointer-events-none', !isActive);
-            });
-
-            galleryDots.forEach((dot, i) => {
-                const isActive = i === index;
-                dot.classList.toggle('bg-google-blue', isActive);
-                dot.classList.toggle('w-3', isActive);
-                dot.classList.toggle('w-2.5', !isActive);
-                dot.classList.toggle('bg-gray-300', !isActive);
-            });
-
-            currentGalleryIndex = index;
-        }
-
-        function nextGallery() {
-            const nextIdx = (currentGalleryIndex + 1) % gallerySlides.length;
-            showGallery(nextIdx);
-        }
-
-        function prevGallery() {
-            const prevIdx = (currentGalleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
-            showGallery(prevIdx);
-        }
-
-        function startGalleryTimer() {
-            if (!galleryTimer) {
-                galleryTimer = setInterval(nextGallery, 3500);
-            }
-        }
-
-        function stopGalleryTimer() {
-            if (galleryTimer) {
-                clearInterval(galleryTimer);
-                galleryTimer = null;
-            }
-        }
-
-        prevGalleryBtn.addEventListener('click', () => {
-            prevGallery();
-            stopGalleryTimer();
-            startGalleryTimer();
-        });
-
-        nextGalleryBtn.addEventListener('click', () => {
-            nextGallery();
-            stopGalleryTimer();
-            startGalleryTimer();
-        });
-
-        galleryDots.forEach((dot, idx) => {
-            dot.addEventListener('click', () => {
-                showGallery(idx);
-                stopGalleryTimer();
-                startGalleryTimer();
-            });
-        });
-
-        startGalleryTimer();
-    </script>
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Sur Music Classes</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+(function(){
+  function carousel(id,ms){
+    var box=document.getElementById(id),s=box.querySelectorAll('.slide'),d=box.querySelectorAll('.dot'),i=0,t=null;
+    function show(n){i=(n+s.length)%s.length;s.forEach(function(e,k){e.classList.toggle('on',k===i)});d.forEach(function(e,k){e.classList.toggle('on',k===i)});}
+    function start(){stop();t=setInterval(function(){show(i+1)},ms);}
+    function stop(){if(t){clearInterval(t);t=null;}}
+    function go(n){show(n);start();}
+    box.querySelector('.prev').onclick=function(){go(i-1)};
+    box.querySelector('.next').onclick=function(){go(i+1)};
+    d.forEach(function(e,k){e.onclick=function(){go(k)}});
+    box.addEventListener('mouseenter',stop);box.addEventListener('mouseleave',start);
+    start();
+  }
+  carousel('carousel',5000);
+  carousel('gallery-car',5000);
+})();
+</script>
 </body>
 </html>
