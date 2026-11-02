@@ -35,15 +35,27 @@ h2{font-size:clamp(28px,4vw,38px);margin:8px 0 14px}
 
 /* header */
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--serif);font-weight:700;font-size:19px}
-.mark{width:34px;height:34px;border-radius:50%;background:var(--indigo);color:var(--bg);display:grid;place-items:center;font-size:15px}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:72px;padding:10px 0;gap:16px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.mark{width:46px;height:46px;border-radius:50%;background:var(--indigo);color:var(--bg);display:grid;place-items:center;font-family:var(--serif);font-size:20px;font-weight:700;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.brand-text{display:flex;flex-direction:column;justify-content:center}
+.brand-text .line-1{font-family:var(--serif);font-size:19px;font-weight:700;line-height:1.2;color:var(--ink)}
+.brand-text .line-2{font-family:var(--sans);font-size:11px;font-weight:500;line-height:1.3;color:var(--muted);letter-spacing:0.02em}
 nav{display:flex;gap:22px;font-size:14px;font-weight:500}
-nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--saffron)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:var(--saffron);color:var(--on-accent);font-weight:600;font-size:14px;text-decoration:none;border:1px solid var(--saffron)}
+nav a{text-decoration:none;color:var(--muted);transition:color .2s ease}nav a:hover{color:var(--saffron)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;background:var(--saffron);color:var(--on-accent);font-weight:600;font-size:14px;text-decoration:none;border:1px solid var(--saffron);transition:filter .2s ease}
 .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn:hover{filter:brightness(1.07)}
-@media(max-width:760px){nav{display:none}}
+
+/* mobile header adjustments */
+@media(max-width:760px){
+  nav{display:none}
+  .bar{padding:12px 0}
+  .mark{width:40px;height:40px;font-size:17px}
+  .brand-text .line-1{font-size:16px}
+  .brand-text .line-2{font-size:10px}
+  .btn{padding:8px 14px;font-size:13px}
+}
 
 /* hero */
 .hero{padding:40px 20px 56px}
@@ -125,7 +137,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
 <header>
   <div class="wrap bar">
-    <a class="brand" href="#top"><span class="mark">सु</span>Sur Music Classes</a>
+    <a class="brand" href="#top">
+      <span class="mark">सु</span>
+      <span class="brand-text">
+        <span class="line-1">Sur Music Classes</span>
+        <span class="line-2">Hindustani Classical Vocal School</span>
+      </span>
+    </a>
     <nav>
       <a href="#learn">Learn</a><a href="#reviews">Reviews</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a>
     </nav>
