@@ -11,7 +11,7 @@
 
     PAGE ARCHITECTURE:
     ------------------
-    1. Header: Brand mark + name, section links, "Call now" action.
+    1. Header: surlogo.png + name, section links, "Call now" action.
     2. Hero: Instructor intro (Hema Shah), headline, about text, tags,
        swara scale graphic, quick facts (rating, opening days).
     3. Curriculum: Three foundations of every lesson.
@@ -19,7 +19,7 @@
     5. How to Join: Studio/online and children/family options.
     6. Gallery: Auto-advancing photo carousel.
     7. Visit: Class hours, phone, studio address, directions.
-    8. Footer: Copyright and back-to-top link.
+    8. Footer: surlogo.png, copyright and back-to-top link.
     ============================================================================
     -->
     <meta charset="UTF-8">
@@ -101,7 +101,10 @@
     <header class="sticky top-0 z-40 w-full bg-apple-bgLight dark:bg-apple-bgDark border-b border-black/5 dark:border-white/10 transition-colors duration-300" style="padding-top: env(safe-area-inset-top, 0px);">
         <div class="w-full px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
             <a href="#top" class="group flex items-center space-x-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-apple-blue rounded-lg p-1 transition-transform active:scale-95">
-                <div class="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-apple-blue flex items-center justify-center text-white text-lg font-bold shadow-md shadow-apple-blue/20 group-hover:scale-105 transition-transform duration-300" aria-hidden="true">सु</div>
+                <!-- Logo: surlogo.png (falls back to the "सु" mark if the file is missing) -->
+                <img src="./surlogo.png" alt="Sur Music Classes logo" class="h-10 sm:h-11 w-auto max-w-[56px] shrink-0 object-contain group-hover:scale-105 transition-transform duration-300"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div style="display:none" class="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-apple-blue items-center justify-center text-white text-lg font-bold shadow-md shadow-apple-blue/20" aria-hidden="true">सु</div>
                 <div class="flex flex-col">
                     <span class="text-base sm:text-lg font-bold tracking-tight group-hover:text-apple-blue transition-colors leading-tight">Sur Music Classes</span>
                     <span class="text-[10px] sm:text-xs font-medium text-apple-subtextLight dark:text-apple-subtextDark tracking-wide">Hindustani Classical Vocal School</span>
@@ -122,7 +125,7 @@
     <main id="top" class="flex-grow">
 
         <!-- HERO: instructor intro, headline, about text, tags, scale, quick facts -->
-        <section aria-labelledby="introTitle" class="flex items-center justify-center px-4 sm:px-6 py-12 sm:py-10">
+        <section aria-labelledby="introTitle" class="flex items-center justify-center px-4 sm:px-6 py-12 sm:py-20">
             <div class="max-w-2xl w-full mx-auto text-center flex flex-col items-center">
                 <div class="relative mb-6 sm:mb-8">
                     <div class="w-[120px] h-[120px] rounded-full ring-4 ring-black/5 dark:ring-white/10 bg-apple-blue/10 text-apple-blue shadow-xl flex items-center justify-center text-4xl font-bold" aria-hidden="true">HS</div>
@@ -131,11 +134,12 @@
                     </div>
                 </div>
 
-                <p class="text-xl sm:text-3xl font-bold tracking-tight leading-tight">Hema Shah</p>
+                <p class="text-xs font-semibold text-apple-blue tracking-widest uppercase mb-2">Hindustani classical vocal school</p>
+                <p class="text-xl sm:text-2xl font-bold tracking-tight leading-tight">Hema Shah</p>
                 <p class="text-sm text-apple-subtextLight dark:text-apple-subtextDark mb-6">Lead instructor · Indiranagar, Bengaluru</p>
 
-                <h1 id="introTitle" class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 sm:mb-5 max-w-xl">
-                    Find your perfect <span class="text-apple-blue">Sur</span>
+                <h1 id="introTitle" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 sm:mb-5 max-w-xl">
+                    Find your <span class="text-apple-blue">Sur</span>, one patient note at a time.
                 </h1>
 
                 <p class="text-base sm:text-lg text-apple-subtextLight dark:text-apple-subtextDark max-w-xl leading-relaxed">
@@ -294,7 +298,10 @@
     <!-- FOOTER -->
     <footer class="border-t border-black/5 dark:border-white/10 py-6 transition-colors duration-300" style="padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));">
         <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs sm:text-sm text-apple-subtextLight dark:text-apple-subtextDark tracking-wide">
-            <span>© <span id="year">2026</span> Sur Music Classes</span>
+            <span class="inline-flex items-center gap-2">
+                <img src="./surlogo.png" alt="Sur Music Classes logo" class="h-8 w-auto max-w-[44px] object-contain" onerror="this.remove()">
+                <span>© <span id="year">2026</span> Sur Music Classes</span>
+            </span>
             <a href="#top" class="text-apple-blue hover:text-blue-600 transition-colors">Back to top ↑</a>
         </div>
     </footer>
