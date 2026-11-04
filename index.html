@@ -71,6 +71,8 @@
         body { margin: 0; overflow-x: hidden; touch-action: manipulation; }
         /* Transparent logo: multiply keeps all dark/coloured details and drops any plain white background. */
         .logo-clear { mix-blend-mode: multiply; background: transparent; }
+        /* Initials sit behind the portrait; they show only if Hema.jpg fails to load. */
+        .avatar-fallback { position: absolute; inset: 0; z-index: 0; display: flex; align-items: center; justify-content: center; }
         :focus-visible { outline: 2px solid rgb(var(--raga-text)); outline-offset: 4px; }
 
         /* Swara scale graphic */
@@ -126,13 +128,19 @@
         <section aria-labelledby="introTitle" class="flex items-center justify-center px-4 sm:px-6 py-12 sm:py-20">
             <div class="max-w-2xl w-full mx-auto text-center flex flex-col items-center">
                 <div class="relative mb-6 sm:mb-8">
-                    <div class="w-[120px] h-[120px] rounded-full ring-4 ring-black/5 bg-raga/10 text-raga-text shadow-xl flex items-center justify-center text-4xl font-bold" aria-hidden="true">HS</div>
-                    <div class="absolute bottom-0 right-0 flex items-center justify-center bg-white rounded-full p-1 shadow-md" title="Open 7 days a week">
-                        <span class="w-3.5 h-3.5 bg-apple-green rounded-full block"></span>
+                    <!-- Instructor portrait: Hema.jpg (falls back to the "HS" initials if the file is missing) -->
+                    <div class="relative w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] rounded-full ring-4 ring-white bg-raga/10 text-raga-text shadow-xl overflow-hidden flex items-center justify-center text-6xl font-bold">
+                        <img src="./Hema.jpg" alt="Portrait of Hema Shah, lead instructor" width="220" height="220"
+                             class="relative z-10 w-full h-full object-cover block" style="object-position: center 20%;"
+                             decoding="async" fetchpriority="high"
+                             onerror="this.remove()">
+                        <span class="avatar-fallback" aria-hidden="true">HS</span>
+                    </div>
+                    <div class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 flex items-center justify-center bg-white rounded-full p-1 shadow-md" title="Open 7 days a week">
+                        <span class="w-4 h-4 sm:w-5 sm:h-5 bg-apple-green rounded-full block"></span>
                     </div>
                 </div>
 
-                <p class="text-xs font-semibold text-raga-text tracking-widest uppercase mb-2">Hindustani classical vocal school</p>
                 <p class="text-xl sm:text-2xl font-bold tracking-tight leading-tight">Hema Shah</p>
                 <p class="text-sm text-apple-subtextLight mb-6">Lead instructor · Indiranagar, Bengaluru</p>
 
